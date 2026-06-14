@@ -11,7 +11,7 @@ pages_build_output_dir = "out"
 [[d1_databases]]
 binding      = "DB"
 database_name = "db-madrasah"
-database_id  = "GANTI_DENGAN_ID_SETELAH_wrangler_d1_create"
+database_id  = "8f300a11-bad7-498f-9cbb-87f95e2c6505"
 
 # ─── KV: Session Login ───
 [[kv_namespaces]]
