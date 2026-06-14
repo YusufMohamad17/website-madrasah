@@ -1,0 +1,97 @@
+/* ============================================================
+   VARIABEL DESAIN — Warna, Font, Spacing
+   Digunakan di seluruh aplikasi sebagai sumber kebenaran tunggal
+   ============================================================ */
+
+:root {
+  /* --- Palet Warna Utama --- */
+  --navy:        #003087;
+  --blue:        #005EB8;
+  --blue-light:  #0072CE;
+  --blue-pale:   #E8F0FA;
+
+  --gold:        #C8A400;
+  --gold-light:  #F0C000;
+  --gold-pale:   #FDF8E1;
+
+  /* --- Warna Netral --- */
+  --white:       #FFFFFF;
+  --offwhite:    #F7F8FA;
+  --gray-50:     #F9FAFB;
+  --gray-100:    #EFF1F5;
+  --gray-200:    #DDE1EA;
+  --gray-300:    #C4CAD6;
+  --gray-400:    #8A94A8;
+  --gray-600:    #555E75;
+  --gray-700:    #3D4459;
+  --black:       #0D1120;
+
+  /* --- Warna Status --- */
+  --success:     #00A86B;
+  --success-pale:#E6F7F1;
+  --warning:     #F59E0B;
+  --warning-pale:#FEF3C7;
+  --danger:      #DC2626;
+  --danger-pale: #FEE2E2;
+  --info:        #0EA5E9;
+  --info-pale:   #E0F2FE;
+
+  /* --- Tipografi --- */
+  --serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --sans:  'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --mono:  'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+
+  /* --- Skala Font --- */
+  --text-xs:   11px;
+  --text-sm:   13px;
+  --text-base: 15px;
+  --text-md:   17px;
+  --text-lg:   20px;
+  --text-xl:   24px;
+  --text-2xl:  30px;
+  --text-3xl:  38px;
+  --text-4xl:  48px;
+
+  /* --- Spacing --- */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+
+  /* --- Border Radius --- */
+  --radius-sm:  6px;
+  --radius-md:  10px;
+  --radius-lg:  14px;
+  --radius-xl:  20px;
+  --radius-full: 9999px;
+
+  /* --- Bayangan --- */
+  --shadow-sm:  0 1px 4px rgba(0, 48, 135, 0.06);
+  --shadow-md:  0 4px 16px rgba(0, 48, 135, 0.10);
+  --shadow-lg:  0 8px 32px rgba(0, 48, 135, 0.14);
+  --shadow-xl:  0 16px 48px rgba(0, 48, 135, 0.18);
+
+  /* --- Transisi --- */
+  --transition-fast:   0.15s ease;
+  --transition-normal: 0.2s ease;
+  --transition-slow:   0.35s ease;
+
+  /* --- Layout --- */
+  --max-width:    1280px;
+  --nav-height:   72px;
+  --section-pad:  72px 32px;
+  --container-px: 32px;
+}
+
+/* --- Breakpoints (sebagai referensi komentar) ---
+   Mobile:  < 640px
+   Tablet:  640px – 1024px
+   Desktop: > 1024px
+*/

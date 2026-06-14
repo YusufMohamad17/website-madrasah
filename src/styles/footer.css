@@ -1,0 +1,220 @@
+/* ============================================================
+   FOOTER — Area Bawah Halaman
+   ============================================================ */
+
+.footer {
+  background: var(--navy);
+  color: rgba(255, 255, 255, 0.7);
+  padding: var(--space-16) var(--container-px) var(--space-8);
+}
+
+/* ─── Grid Footer ─── */
+.footer__grid {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: var(--space-10);
+  margin-bottom: var(--space-12);
+}
+
+/* ─── Brand / Kolom Pertama ─── */
+.footer__brand .footer__logo {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  text-decoration: none;
+  margin-bottom: var(--space-4);
+}
+
+.footer__brand .footer__logo-badge {
+  width: 42px;
+  height: 42px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid var(--gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.footer__brand .footer__school-name {
+  font-family: var(--serif);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.footer__brand .footer__school-sub {
+  font-size: var(--text-xs);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.footer__brand p {
+  font-size: var(--text-sm);
+  line-height: 1.75;
+  max-width: 280px;
+  margin-bottom: 0;
+}
+
+/* ─── Sosial Media ─── */
+.footer__social {
+  display: flex;
+  gap: var(--space-2);
+  margin-top: var(--space-5);
+}
+
+.social-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 15px;
+  text-decoration: none;
+  transition:
+    background var(--transition-normal),
+    color var(--transition-normal),
+    border-color var(--transition-normal),
+    transform var(--transition-fast);
+}
+
+.social-btn:hover {
+  background: var(--gold);
+  color: var(--navy);
+  border-color: var(--gold);
+  transform: translateY(-2px);
+}
+
+/* ─── Kolom Menu Footer ─── */
+.footer__col h4 {
+  font-family: var(--serif);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer__col ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.footer__col ul li a {
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.footer__col ul li a::before {
+  content: '›';
+  color: var(--gold);
+  font-size: 16px;
+  line-height: 1;
+}
+
+.footer__col ul li a:hover {
+  color: var(--gold-light);
+}
+
+/* ─── Kontak ─── */
+.footer__contact {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.contact-item {
+  display: flex;
+  gap: var(--space-3);
+  align-items: flex-start;
+  font-size: var(--text-sm);
+  line-height: 1.5;
+}
+
+.contact-item__icon {
+  font-size: 14px;
+  flex-shrink: 0;
+  opacity: 0.6;
+  margin-top: 2px;
+  width: 16px;
+  text-align: center;
+}
+
+.contact-item a {
+  color: rgba(255, 255, 255, 0.6);
+  transition: color var(--transition-fast);
+}
+
+.contact-item a:hover {
+  color: var(--gold-light);
+}
+
+/* ─── Baris Bawah Footer ─── */
+.footer__bottom {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding-top: var(--space-6);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--text-xs);
+  color: rgba(255, 255, 255, 0.3);
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.footer__bottom a {
+  color: var(--gold-light);
+  text-decoration: none;
+}
+
+.footer__bottom a:hover {
+  text-decoration: underline;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 1024px) {
+  .footer__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-8);
+  }
+
+  .footer__brand {
+    grid-column: 1 / -1;
+  }
+
+  .footer__brand p {
+    max-width: 480px;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer {
+    padding: var(--space-10) var(--space-4) var(--space-6);
+  }
+
+  .footer__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}

@@ -1,0 +1,30 @@
+/* ============================================================
+   GLOBALS.CSS — Titik Masuk Utama CSS
+   Urutan impor PENTING: variabel → base → komponen → layout → halaman
+   ============================================================ */
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* 1. Variabel & Token Desain (harus paling pertama) */
+@import './variables.css';
+
+/* 2. Reset & Gaya Dasar */
+@import './base.css';
+
+/* 3. Komponen UI (tombol, kartu, form, dll) */
+@import './components.css';
+
+/* 4. Layout: Navbar & Footer */
+@import './navbar.css';
+@import './footer.css';
+
+/* 5. Halaman Spesifik */
+@import './home.css';
+
+/* Tambahkan impor halaman baru di sini, contoh:
+   @import './ppdb.css';
+   @import './siswa.css';
+   @import './ujian.css';
+   @import './admin.css';
+*/

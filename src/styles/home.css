@@ -1,0 +1,418 @@
+/* ============================================================
+   HALAMAN BERANDA — Hero, Kartu Layanan, Events, People
+   ============================================================ */
+
+/* ─── Hero Section ─── */
+.hero {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 60%, var(--blue-light) 100%);
+  padding: 72px var(--container-px) 64px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Dekorasi latar belakang abstrak */
+.hero__bg-deco {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.hero__bg-circle {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.hero__bg-circle--1 {
+  width: 500px;
+  height: 500px;
+  right: -100px;
+  top: -150px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.hero__bg-circle--2 {
+  width: 300px;
+  height: 300px;
+  right: 100px;
+  bottom: -100px;
+  background: rgba(200, 164, 0, 0.06);
+}
+
+/* Garis aksen bawah hero */
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-light), var(--gold));
+}
+
+.hero__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--space-12);
+  align-items: center;
+}
+
+/* ─── Konten Hero (Kiri) ─── */
+.hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: rgba(200, 164, 0, 0.18);
+  border: 1px solid rgba(200, 164, 0, 0.35);
+  border-radius: var(--radius-full);
+  padding: 4px 14px;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  color: var(--gold-light);
+  text-transform: uppercase;
+  margin-bottom: var(--space-4);
+}
+
+.hero__title {
+  font-family: var(--serif);
+  font-size: var(--text-4xl);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.12;
+  margin-bottom: var(--space-4);
+}
+
+.hero__title em {
+  color: var(--gold-light);
+  font-style: normal;
+}
+
+.hero__desc {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.75);
+  max-width: 520px;
+  line-height: 1.75;
+  margin-bottom: var(--space-8);
+}
+
+.hero__cta {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+/* ─── Statistik Hero (Kanan) ─── */
+.hero__stats {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.hero__stat {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-lg);
+  padding: 16px 20px;
+  text-align: center;
+  min-width: 120px;
+  backdrop-filter: blur(4px);
+  transition: background var(--transition-normal);
+}
+
+.hero__stat:hover {
+  background: rgba(255, 255, 255, 0.13);
+}
+
+.hero__stat-num {
+  font-family: var(--serif);
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--gold-light);
+  display: block;
+  line-height: 1;
+}
+
+.hero__stat-label {
+  font-size: var(--text-xs);
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: var(--space-1);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+/* ─── Layanan Utama (4 Kartu) ─── */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-5);
+}
+
+/* ─── Dashboard Info Cards ─── */
+.info-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+}
+
+/* ─── Event & Pengumuman (2 Kolom) ─── */
+.events-layout {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: var(--space-12);
+  align-items: start;
+}
+
+/* ─── Event List ─── */
+.event-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.event-item {
+  display: flex;
+  gap: var(--space-5);
+  align-items: flex-start;
+  padding: var(--space-5) 0;
+  border-bottom: 1px solid var(--gray-100);
+  transition: background var(--transition-fast);
+}
+
+.event-item:last-child {
+  border-bottom: none;
+}
+
+.event-item:hover {
+  padding-left: var(--space-2);
+}
+
+.event-item__date {
+  flex-shrink: 0;
+  width: 54px;
+  text-align: center;
+  background: var(--navy);
+  border-radius: var(--radius-md);
+  padding: 8px 0;
+  transition: background var(--transition-normal);
+}
+
+.event-item:hover .event-item__date {
+  background: var(--blue);
+}
+
+.event-item__day {
+  font-family: var(--serif);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--gold-light);
+  display: block;
+  line-height: 1;
+}
+
+.event-item__month {
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.event-item__content {
+  flex: 1;
+}
+
+.event-item__tag {
+  display: inline-block;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  background: rgba(0, 94, 184, 0.1);
+  color: var(--blue);
+  margin-bottom: var(--space-2);
+}
+
+.event-item__title {
+  font-family: var(--serif);
+  font-size: 15px;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+
+.event-item__desc {
+  font-size: var(--text-sm);
+  color: var(--gray-400);
+  margin-bottom: 0;
+}
+
+/* ─── Pengumuman Sidebar ─── */
+.announcement-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.announcement-item {
+  padding: var(--space-4);
+  border-left: 3px solid;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  transition: transform var(--transition-fast);
+}
+
+.announcement-item:hover {
+  transform: translateX(3px);
+}
+
+.announcement-item--blue {
+  background: rgba(0, 94, 184, 0.05);
+  border-color: var(--blue);
+}
+
+.announcement-item--gold {
+  background: rgba(200, 164, 0, 0.07);
+  border-color: var(--gold);
+}
+
+.announcement-item__date {
+  font-size: var(--text-xs);
+  color: var(--gray-400);
+  margin-bottom: 4px;
+}
+
+.announcement-item__title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+
+.announcement-item__desc {
+  font-size: var(--text-xs);
+  color: var(--gray-400);
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* ─── Orang (Guru & Alumni) ─── */
+.people-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+}
+
+.person-card {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition:
+    box-shadow var(--transition-normal),
+    transform var(--transition-normal),
+    border-color var(--transition-normal);
+}
+
+.person-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
+  border-color: var(--blue);
+}
+
+.person-card__avatar {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: var(--navy);
+  border: 2px solid var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: var(--space-3);
+  transition: transform var(--transition-normal);
+}
+
+.person-card:hover .person-card__avatar {
+  transform: scale(1.08);
+}
+
+.person-card__name {
+  font-family: var(--serif);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.person-card__role {
+  font-size: var(--text-xs);
+  color: var(--gray-400);
+  margin-top: 3px;
+}
+
+.person-card__tag {
+  margin-top: var(--space-3);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  background: rgba(0, 94, 184, 0.08);
+  color: var(--blue);
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 1024px) {
+  .hero__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__stats {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .hero__stat {
+    min-width: 110px;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .info-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .people-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .events-layout {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+}
+
+@media (max-width: 640px) {
+  .services-grid,
+  .info-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__cta {
+    flex-direction: column;
+  }
+
+  .hero__cta .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

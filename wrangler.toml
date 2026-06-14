@@ -1,0 +1,37 @@
+# ============================================================
+# wrangler.toml — Konfigurasi Cloudflare
+# Jalankan: wrangler deploy
+# ============================================================
+
+name                   = "website-madrasah"
+compatibility_date     = "2024-09-23"
+pages_build_output_dir = "out"
+
+# ─── D1 Database ───
+[[d1_databases]]
+binding      = "DB"
+database_name = "db-madrasah"
+database_id  = "GANTI_DENGAN_ID_SETELAH_wrangler_d1_create"
+
+# ─── KV: Session Login ───
+[[kv_namespaces]]
+binding = "SESSION_STORE"
+id      = "GANTI_DENGAN_ID_SETELAH_wrangler_kv_namespace_create"
+
+# ─── R2: File Storage ───
+[[r2_buckets]]
+binding     = "STORAGE"
+bucket_name = "dokumen-madrasah"
+
+# ─── Workers AI ───
+[ai]
+binding = "AI"
+
+# ─── Environment Variables ───
+[vars]
+NEXT_PUBLIC_SCHOOL_NAME   = "MAN 1 Kota Contoh"
+NEXT_PUBLIC_SCHOOL_DOMAIN = "man1kotacontoh.web.id"
+
+# ─── Development (lokal) ───
+[dev]
+port = 8788
